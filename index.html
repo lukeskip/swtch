@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swtch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/swtch.css" rel="stylesheet">
+</head>
+<body>
+    <div class="swtch-container"></div>
+
+    <div class="swtch-container2"></div>
+    <div class="swtch-container3"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/Swtch.js"></script>
+    <script>
+        const swtchLabels1 = [
+                {
+                    slug: 'efectivo',
+                    color: '#46b716',
+                    icon: '<i class="fa fa-money" aria-hidden="true"></i>'
+                },
+                {
+                    slug: 'tarjeta',
+                    color: '#d84b2a',
+                    icon: '<i class="fa fa-credit-card" aria-hidden="true"></i>'
+                },
+                {
+                    slug: 'mercado-pago',
+                    color: '#0069d9',
+                    icon: '<i class="fa fa-qrcode" aria-hidden="true"></i>'
+                },
+                {
+                    slug: 'mercado-pago2',
+                    color: '#0069d4',
+                    icon: '<i class="fa fa-qrcode" aria-hidden="true"></i>'
+                },
+            ]
+            swtch1 = new Swtch ('.swtch-container',swtchLabels1,'efectivo');
+
+
+            const swtchLabels2 = [
+                {
+                    slug: 'efectivo',
+                    color: '#46b716',
+                    icon: '<i class="fa fa-money" aria-hidden="true"></i>'
+                },
+                {
+                    slug: 'tarjeta',
+                    color: '#d84b2a',
+                    icon: '<i class="fa fa-credit-card" aria-hidden="true"></i>'
+                },
+                {
+                    slug: 'mercado-pago',
+                    color: '#0069d9',
+                    icon: '<i class="fa fa-qrcode" aria-hidden="true"></i>'
+                },
+            ]
+            swtch2 = new Swtch ('.swtch-container2',swtchLabels2,'efectivo');
+            swtch2.afterMove = function(){
+                console.log(swtch2.value);
+            }
+
+
+            const swtchLabels3 = [
+                {
+                    slug: 'efectivo',
+                    color: '#46b716',
+                    label: 'Efectivo',
+                    
+                },
+                {
+                    slug: 'tarjeta',
+                    color: '#d84b2a',
+                    label: 'Tarjeta',
+                    
+                },
+                {
+                    slug: 'mercado-pago',
+                    color: '#0069d9',
+                    label: 'Mercado Pago',
+                },
+            ]
+            swtch3 = new Swtch ('.swtch-container3',swtchLabels3,'efectivo');
+            
+    </script>
+</body>
+</html>
